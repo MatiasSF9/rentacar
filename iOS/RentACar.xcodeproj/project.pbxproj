@@ -19,6 +19,8 @@
 		D62E38B617AD4B1A00BF1BFD /* PublicationImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38B517AD4B1A00BF1BFD /* PublicationImageCell.m */; };
 		D62E38BC17AD565C00BF1BFD /* DiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38BB17AD565C00BF1BFD /* DiskCache.m */; };
 		D62E38BF17AD578E00BF1BFD /* AsyncImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38BE17AD578D00BF1BFD /* AsyncImageLoader.m */; };
+		D62E38C117AD5F4B00BF1BFD /* PublicationImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E38C017AD5F4B00BF1BFD /* PublicationImageCell.xib */; };
+		D62E38C717AD623700BF1BFD /* KeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38C617AD623700BF1BFD /* KeyboardManager.m */; };
 		D6F827BC17AD216C00E3C931 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BB17AD216C00E3C931 /* UIKit.framework */; };
 		D6F827BE17AD216C00E3C931 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BD17AD216C00E3C931 /* Foundation.framework */; };
 		D6F827C017AD216C00E3C931 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BF17AD216C00E3C931 /* CoreGraphics.framework */; };
@@ -76,6 +78,9 @@
 		D62E38BB17AD565C00BF1BFD /* DiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCache.m; sourceTree = "<group>"; };
 		D62E38BD17AD578D00BF1BFD /* AsyncImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageLoader.h; sourceTree = "<group>"; };
 		D62E38BE17AD578D00BF1BFD /* AsyncImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageLoader.m; sourceTree = "<group>"; };
+		D62E38C017AD5F4B00BF1BFD /* PublicationImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicationImageCell.xib; sourceTree = "<group>"; };
+		D62E38C517AD623700BF1BFD /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		D62E38C617AD623700BF1BFD /* KeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardManager.m; sourceTree = "<group>"; };
 		D6F827B817AD216C00E3C931 /* RentACar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentACar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F827BB17AD216C00E3C931 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F827BD17AD216C00E3C931 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +184,7 @@
 			children = (
 				D62E38B417AD4B1A00BF1BFD /* PublicationImageCell.h */,
 				D62E38B517AD4B1A00BF1BFD /* PublicationImageCell.m */,
+				D62E38C017AD5F4B00BF1BFD /* PublicationImageCell.xib */,
 			);
 			name = PublicationImageCell;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 				D62E38B917AD562800BF1BFD /* Extenders */,
 				D62E38BA17AD565C00BF1BFD /* DiskCache.h */,
 				D62E38BB17AD565C00BF1BFD /* DiskCache.m */,
+				D62E38C517AD623700BF1BFD /* KeyboardManager.h */,
+				D62E38C617AD623700BF1BFD /* KeyboardManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -442,6 +450,7 @@
 				D62E389B17AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib in Resources */,
 				D62E38A017AD2DE100BF1BFD /* LocatInMapViewController.xib in Resources */,
 				D62E38A517AD2DFD00BF1BFD /* PublicationPreviewViewController.xib in Resources */,
+				D62E38C117AD5F4B00BF1BFD /* PublicationImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +498,7 @@
 				D62E38B617AD4B1A00BF1BFD /* PublicationImageCell.m in Sources */,
 				D62E38BC17AD565C00BF1BFD /* DiskCache.m in Sources */,
 				D62E38BF17AD578E00BF1BFD /* AsyncImageLoader.m in Sources */,
+				D62E38C717AD623700BF1BFD /* KeyboardManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

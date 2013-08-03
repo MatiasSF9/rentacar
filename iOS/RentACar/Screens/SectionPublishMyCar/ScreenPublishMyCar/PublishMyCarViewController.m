@@ -11,6 +11,7 @@
 #import "AddImageToPublicationViewController.h"
 #import "PublicationBuilder.h"
 #import "PublicationImageCell.h"
+#import "KeyboardManager.h"
 
 #define HEIGHT_CELL_CAR_IMAGES_PUBLICATION  50
 #define MAX_TABLE_HEIGHT                    150
@@ -85,6 +86,10 @@
 
 #pragma mark - UITextFieldDelegate delegate
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [KeyboardManager willMoveToVisibleArea:textField inView:dataScrollView];
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
     if([textField isEqual:txtContactNumber]) {
@@ -100,6 +105,14 @@
     } else if([textField isEqual:txtUsername]) {
         [[PublicationBuilder sharedInstance] setPublicationUsername:textField.text];
     }
+    
+    //Returns the keyboard to its original position
+    [KeyboardManager returnToViewFrame:dataScrollView];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 #pragma mark - UITableViewDataSource delegate

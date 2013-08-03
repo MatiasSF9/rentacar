@@ -8,26 +8,29 @@
 
 #import "PublicationImageCell.h"
 
+@interface PublicationImageCell() {
+    IBOutlet UIImageView* image;
+    IBOutlet UILabel* title;
+}
+
+@end
+
 @implementation PublicationImageCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        //Cleans the style while selectin the cell.
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 - (void) configureCell:(PublicationImage*) publicationImage {
-    
+    //Configures the cell whith the publication image data.
+    [image setImage:[UIImage imageWithData:[publicationImage imageContent]]];
+    [title setText:[publicationImage title]];
 }
 
 @end
