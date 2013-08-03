@@ -21,6 +21,7 @@
 		D62E38BF17AD578E00BF1BFD /* AsyncImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38BE17AD578D00BF1BFD /* AsyncImageLoader.m */; };
 		D62E38C117AD5F4B00BF1BFD /* PublicationImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E38C017AD5F4B00BF1BFD /* PublicationImageCell.xib */; };
 		D62E38C717AD623700BF1BFD /* KeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38C617AD623700BF1BFD /* KeyboardManager.m */; };
+		D62E38CC17AD69E700BF1BFD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62E38CB17AD69E700BF1BFD /* CoreLocation.framework */; };
 		D6F827BC17AD216C00E3C931 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BB17AD216C00E3C931 /* UIKit.framework */; };
 		D6F827BE17AD216C00E3C931 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BD17AD216C00E3C931 /* Foundation.framework */; };
 		D6F827C017AD216C00E3C931 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BF17AD216C00E3C931 /* CoreGraphics.framework */; };
@@ -81,6 +82,7 @@
 		D62E38C017AD5F4B00BF1BFD /* PublicationImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicationImageCell.xib; sourceTree = "<group>"; };
 		D62E38C517AD623700BF1BFD /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
 		D62E38C617AD623700BF1BFD /* KeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardManager.m; sourceTree = "<group>"; };
+		D62E38CB17AD69E700BF1BFD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D6F827B817AD216C00E3C931 /* RentACar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentACar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F827BB17AD216C00E3C931 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F827BD17AD216C00E3C931 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62E38CC17AD69E700BF1BFD /* CoreLocation.framework in Frameworks */,
 				D6F827F417AD216C00E3C931 /* SenTestingKit.framework in Frameworks */,
 				D6F827F517AD216C00E3C931 /* UIKit.framework in Frameworks */,
 				D6F827F617AD216C00E3C931 /* Foundation.framework in Frameworks */,
@@ -232,6 +235,7 @@
 		D6F827BA17AD216C00E3C931 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D62E38CB17AD69E700BF1BFD /* CoreLocation.framework */,
 				D6F8280A17AD219F00E3C931 /* MapKit.framework */,
 				D6F827BB17AD216C00E3C931 /* UIKit.framework */,
 				D6F827BD17AD216C00E3C931 /* Foundation.framework */,
