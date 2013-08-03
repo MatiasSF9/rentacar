@@ -16,7 +16,6 @@
 static int offSet;
 
 + (void) willMoveToVisibleArea: (UITextField*) txtField inView: (UIView*) view{
-    NSLog(@"FLOAT %f", txtField.frame.origin.y);
     if (txtField.frame.origin.y + view.frame.origin.y < KEYBOARD_HEIGHT){
         return;
     }

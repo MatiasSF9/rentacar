@@ -141,7 +141,7 @@
 #pragma mark - UITableViewDelegate delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //TODO: Do something with row selection.
+    //TODO: While Selected go to the photo screen in edition mode.
     
 }
 
