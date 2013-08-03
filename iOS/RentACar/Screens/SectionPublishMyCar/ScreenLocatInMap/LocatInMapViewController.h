@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
+@protocol TapCoordinatesDelegate <NSObject>
+
+- (void) mapWasTappedinLocation:(CLLocationCoordinate2D) coordinates;
+
+@end
 
 @interface LocatInMapViewController : UIViewController
+
+@property (nonatomic,assign) id<TapCoordinatesDelegate> tapDelegate;
 
 @end

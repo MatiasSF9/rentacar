@@ -84,6 +84,12 @@
                                          animated:YES];
 }
 
+- (IBAction)locateCarInMap:(id)sender {
+    LocatInMapViewController* controller = [[LocatInMapViewController alloc] initWithNibName:@"LocatInMapViewController" bundle:nil];
+    [controller setTapDelegate:self];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 #pragma mark - UITextFieldDelegate delegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -147,6 +153,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return HEIGHT_CELL_CAR_IMAGES_PUBLICATION;
+}
+
+#pragma mark - TapCoordinatesDelegate delegate
+
+- (void) mapWasTappedinLocation:(CLLocationCoordinate2D) coordinates {
+    
+    //Change the builder coordinates with the new ones.
+    [[PublicationBuilder sharedInstance] setCurrentCarLocation:coordinates];
 }
 
 @end
