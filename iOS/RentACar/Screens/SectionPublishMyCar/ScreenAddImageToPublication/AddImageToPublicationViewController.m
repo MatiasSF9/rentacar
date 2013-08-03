@@ -16,26 +16,25 @@
 
 #pragma mark - Lifecycle
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    self.txtFldDescription.delegate = self;
+    self.txtFldTitle.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Image Management
+#pragma mark - IBActions
 
 - (IBAction)takePicture:(UIButton *)sender {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -68,13 +67,63 @@
     }
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    self.imgTakenPicture.image = image;
+- (IBAction)changePicture:(id)sender {
+    self.imgTakenPicture.image = nil;
+    [self switchLayoutsVisibility: YES];
+}
+
+- (IBAction)nextStep:(id)sender {
+    
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+        didFinishPickingImage:(UIImage *)image
+                  editingInfo:(NSDictionary *)editingInfo {
+    
+    [self resizeImageAndPreview: image];
+
     [picker dismissModalViewControllerAnimated:YES];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - TextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self didCompleteAllFields];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField isEqual: self.txtFldTitle]) {
+        [self.txtFldDescription becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
+
+#pragma mark - Private Methods
+
+- (void) resizeImageAndPreview: (UIImage*) image {
+    
+    //TODO: do quality resize
+    self.imgTakenPicture.image = image;
+    [self switchLayoutsVisibility: NO];
+}
+
+- (void) switchLayoutsVisibility:(BOOL)visibility {
+    self.textFieldContainerView.hidden = visibility;
+    self.buttonContainerView.hidden = !visibility;
+}
+
+- (void) didCompleteAllFields {
+    self.btnNext.hidden =  [self.txtFldTitle.text isEqualToString:@""]
+                        || [self.txtFldDescription.text isEqualToString:@""]
+                        ||  !self.imgTakenPicture.image;
 }
 
 @end
