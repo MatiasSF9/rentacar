@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D624CA7917AD7C9A00492DBE /* UITableViewCellLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */; };
+		D624CA7A17AD891A00492DBE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62E38CB17AD69E700BF1BFD /* CoreLocation.framework */; };
 		D62E389A17AD2DCD00BF1BFD /* AddImageToPublicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */; };
 		D62E389B17AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */; };
 		D62E389F17AD2DE100BF1BFD /* LocatInMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389D17AD2DE100BF1BFD /* LocatInMapViewController.m */; };
@@ -125,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D624CA7A17AD891A00492DBE /* CoreLocation.framework in Frameworks */,
 				D6F8280B17AD219F00E3C931 /* MapKit.framework in Frameworks */,
 				D6F827BC17AD216C00E3C931 /* UIKit.framework in Frameworks */,
 				D6F827BE17AD216C00E3C931 /* Foundation.framework in Frameworks */,

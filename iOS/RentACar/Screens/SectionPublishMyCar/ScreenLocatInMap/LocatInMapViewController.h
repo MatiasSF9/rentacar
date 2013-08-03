@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @protocol TapCoordinatesDelegate <NSObject>
 
@@ -16,6 +17,8 @@
 @end
 
 @interface LocatInMapViewController : UIViewController
+
+- (void) showPins:(NSMutableArray*) pins;
 
 @property (nonatomic,assign) id<TapCoordinatesDelegate> tapDelegate;
 

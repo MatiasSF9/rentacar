@@ -93,7 +93,17 @@
 
 - (IBAction)locateCarInMap:(id)sender {
     LocatInMapViewController* controller = [[LocatInMapViewController alloc] initWithNibName:@"LocatInMapViewController" bundle:nil];
+    
     [controller setTapDelegate:self];
+    
+    CLLocationCoordinate2D coordinate = [[PublicationBuilder sharedInstance] getCurrentCarLocation];
+    
+    //If car location is valid, show it on the map
+    if(CLLocationCoordinate2DIsValid(coordinate)) {
+        [controller showPins:[[NSMutableArray alloc] initWithObjects:[[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude], nil]];
+    }
+    
+    //Push the view controller
     [self.navigationController pushViewController:controller animated:YES];
 }
 

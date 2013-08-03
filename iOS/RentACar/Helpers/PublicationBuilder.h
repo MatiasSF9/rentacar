@@ -21,12 +21,21 @@
 
 + (PublicationBuilder*) sharedInstance;
 
+//Setters
 - (void) setPublicationDescription:(NSString*) description;
 - (void) setPublicationTitle:(NSString*) title;
 - (void) setPublicationContactNumber:(NSString*) contactNumber;
 - (void) setPublicationUsername:(NSString*) username;
 - (void) setPublicationCostPerDay:(NSNumber*) costPerDay;
 - (void) setCurrentCarLocation:(CLLocationCoordinate2D) location;
+
+//Getters
+- (NSString*) getPublicationDescription;
+- (NSString*) getPublicationTitle;
+- (NSString*) getPublicationContactNumber;
+- (NSString*) getPublicationUsername;
+- (NSNumber*) getPublicationCostPerDay;
+- (CLLocationCoordinate2D) getCurrentCarLocation;
 
 //Adds image to publication.
 //Returns: NO if no image couldn't be added or YES if image was added succesfully.

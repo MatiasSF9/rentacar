@@ -67,6 +67,7 @@ static PublicationBuilder* instance;
 
 #pragma mark - Publication Handling
 
+//Setters
 - (void) setPublicationDescription:(NSString*) description {
     [self.currentPublication setDescription:description];
 };
@@ -84,6 +85,27 @@ static PublicationBuilder* instance;
 }
 - (void) setCurrentCarLocation:(CLLocationCoordinate2D) location {
     [self.currentPublication setCarLocation:location];
+};
+
+
+//Getters
+- (NSString*) getPublicationDescription {
+    return  [self.currentPublication description];
+};
+- (NSString*) getPublicationTitle {
+    return [self.currentPublication title];
+}
+- (NSString*) getPublicationContactNumber {
+    return [self.currentPublication contactNumber];
+}
+- (NSString*) getPublicationUsername {
+    return [self.currentPublication username];
+}
+- (NSNumber*) getPublicationCostPerDay:(NSNumber*) costPerDay {
+    return  [self.currentPublication costPerDay];
+}
+- (CLLocationCoordinate2D) getCurrentCarLocation {
+    return [self.currentPublication carLocation];
 };
 
 #pragma mark - PublicationImages Handling
