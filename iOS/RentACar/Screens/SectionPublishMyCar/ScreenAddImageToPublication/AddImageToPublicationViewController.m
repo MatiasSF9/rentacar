@@ -7,6 +7,8 @@
 //
 
 #import "AddImageToPublicationViewController.h"
+#import "KeyboardManager.h"
+
 
 @interface AddImageToPublicationViewController ()
 
@@ -19,7 +21,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        self.title = NSLocalizedString(@"Add New Photo", @"Add New Photo");
     }
     return self;
 }
@@ -95,6 +97,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [self didCompleteAllFields];
+    [KeyboardManager returnToViewFrame: self.textFieldContainerView];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -106,12 +109,15 @@
     return YES;
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [KeyboardManager willMoveToVisibleArea:textField inView: self.textFieldContainerView];
+}
+
 #pragma mark - Private Methods
 
 - (void) resizeImageAndPreview: (UIImage*) image {
     
-    //TODO: do quality resize
-    self.imgTakenPicture.image = image;
+    self.imgTakenPicture.image = [self.imgTakenPicture makeResizedImage: image :self.imgTakenPicture.frame.size quality:kCGInterpolationMedium];
     [self switchLayoutsVisibility: NO];
 }
 

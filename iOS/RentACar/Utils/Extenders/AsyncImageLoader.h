@@ -12,4 +12,5 @@
 //Automatically handles image download showing the placeholder image in the meanwhile.
 - (void) setImageURL: (NSURL*) url placeHolder: (UIImage *) image usingCache: (BOOL) withCache;
 
+- (UIImage *)makeResizedImage:(UIImage*)imagen :(CGSize)newSize quality:(CGInterpolationQuality)interpolationQuality;
 @end
