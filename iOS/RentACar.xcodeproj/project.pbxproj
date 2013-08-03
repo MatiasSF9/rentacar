@@ -12,6 +12,7 @@
 		C9CEA00817AD92F300381604 /* ImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9CEA00717AD92F300381604 /* ImageDetailView.xib */; };
 		D624CA7917AD7C9A00492DBE /* UITableViewCellLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */; };
 		D624CA7A17AD891A00492DBE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62E38CB17AD69E700BF1BFD /* CoreLocation.framework */; };
+		D624CA7E17AD942E00492DBE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D624CA7D17AD942E00492DBE /* BaseViewController.m */; };
 		D62E389A17AD2DCD00BF1BFD /* AddImageToPublicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */; };
 		D62E389B17AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */; };
 		D62E389F17AD2DE100BF1BFD /* LocatInMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389D17AD2DE100BF1BFD /* LocatInMapViewController.m */; };
@@ -71,6 +72,8 @@
 		C9CEA00717AD92F300381604 /* ImageDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageDetailView.xib; path = ImageDetailView/ImageDetailView.xib; sourceTree = "<group>"; };
 		D624CA7717AD7C9A00492DBE /* UITableViewCellLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellLoader.h; sourceTree = "<group>"; };
 		D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellLoader.m; sourceTree = "<group>"; };
+		D624CA7C17AD942E00492DBE /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = BaseControllers/BaseViewController.h; sourceTree = "<group>"; };
+		D624CA7D17AD942E00492DBE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = BaseControllers/BaseViewController.m; sourceTree = "<group>"; };
 		D62E389717AD2DCD00BF1BFD /* AddImageToPublicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageToPublicationViewController.h; sourceTree = "<group>"; };
 		D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageToPublicationViewController.m; sourceTree = "<group>"; };
 		D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageToPublicationViewController.xib; sourceTree = "<group>"; };
@@ -173,6 +176,13 @@
 				C9CEA00717AD92F300381604 /* ImageDetailView.xib */,
 			);
 			name = ImageDetailView;
+		D624CA7B17AD93F900492DBE /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D624CA7C17AD942E00492DBE /* BaseViewController.h */,
+				D624CA7D17AD942E00492DBE /* BaseViewController.m */,
+			);
+			name = BaseControllers;
 			sourceTree = "<group>";
 		};
 		D62E389417AD2D9100BF1BFD /* ScreenAddImageToPublication */ = {
@@ -363,6 +373,7 @@
 		D6F8281E17AD25B600E3C931 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D624CA7B17AD93F900492DBE /* BaseControllers */,
 				D6F8283117AD266E00E3C931 /* SectionPublishMyCar */,
 				D6F8281F17AD25B600E3C931 /* SectionCarList */,
 			);
@@ -547,6 +558,7 @@
 				D624CA7917AD7C9A00492DBE /* UITableViewCellLoader.m in Sources */,
 				C9CEA00217AD929B00381604 /* ImageCarouselView.m in Sources */,
 				C9CEA00617AD92CF00381604 /* ImageDetailView.m in Sources */,
+				D624CA7E17AD942E00492DBE /* BaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

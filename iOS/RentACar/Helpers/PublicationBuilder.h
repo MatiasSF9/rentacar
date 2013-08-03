@@ -52,4 +52,8 @@
 
 - (NSArray*) getCurrentPublicationImages;
 
++ (void) saveInstanceOnPersistentStorage;
+
++ (void) restoreInstanceFromPersistentStorage;
+
 @end

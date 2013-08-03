@@ -10,6 +10,8 @@
 #import "Publication.h"
 #import "PublicationImage.h"
 
+#define PUBLICATION_KEY     @"-0-Publication-0-"
+
 @interface PublicationBuilder ()
 
 @property (nonatomic, retain) NSMutableArray* imagesList;
@@ -101,7 +103,7 @@ static PublicationBuilder* instance;
 - (NSString*) getPublicationUsername {
     return [self.currentPublication username];
 }
-- (NSNumber*) getPublicationCostPerDay:(NSNumber*) costPerDay {
+- (NSNumber*) getPublicationCostPerDay {
     return  [self.currentPublication costPerDay];
 }
 - (CLLocationCoordinate2D) getCurrentCarLocation {
@@ -129,8 +131,38 @@ static PublicationBuilder* instance;
 }
 
 - (NSArray*) getCurrentPublicationImages {
-    //TODO: Chequear!!!
-    return [NSArray arrayWithArray:self.imagesList];
+    return self.imagesList;
+}
+
+#pragma mark - PersistentStorage
+
++ (void) saveInstanceOnPersistentStorage {
+    //Makes sure the singleton is created
+    [PublicationBuilder sharedInstance];
+    
+    [instance.currentPublication setImages:instance.imagesList];
+    //Archives the object after deleting the previous one
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey: PUBLICATION_KEY];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:instance.currentPublication]
+                                              forKey: PUBLICATION_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (void) restoreInstanceFromPersistentStorage {
+    
+    //Makes sure the singleton is created
+    [PublicationBuilder sharedInstance];
+    
+    //Retrieves and decompress the Archieved object
+    id object  = [[NSUserDefaults standardUserDefaults] objectForKey: PUBLICATION_KEY];
+    
+	if (object) {
+		instance.currentPublication = [NSKeyedUnarchiver unarchiveObjectWithData:object];
+        instance.imagesList = instance.currentPublication.images;
+	}
+	else {
+        [instance startNewPublication];
+	}
 }
 
 

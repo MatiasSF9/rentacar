@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface PublicationPreviewViewController : UIViewController
+@interface PublicationPreviewViewController : BaseViewController
 
 @end

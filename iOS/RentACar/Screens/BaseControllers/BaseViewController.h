@@ -1,5 +1,5 @@
 //
-//  CarsListViewController.h
+//  BaseViewController.h
 //  RentACar
 //
 //  Created by Matias Paillet on 8/3/13.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface CarsListViewController : BaseViewController
+@interface BaseViewController : UIViewController
 
 @end

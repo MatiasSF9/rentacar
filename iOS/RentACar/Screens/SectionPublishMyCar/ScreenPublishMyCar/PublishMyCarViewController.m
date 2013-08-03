@@ -47,14 +47,8 @@
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void) viewWillAppear:(BOOL)animated {
-    //Resizes the view content when is going to be shown to do it properly.
+    //Resizes the view content when is going to be shown to show it properly.
     [self resizeContent];
     [self reloadPhotos];
 }

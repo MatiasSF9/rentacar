@@ -10,8 +10,9 @@
 #import "AsyncImageLoader.h"
 #import <MapKit/MapKit.h>
 #import "LocatInMapViewController.h"
+#import "BaseViewController.h"
 
-@interface AddImageToPublicationViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, TapCoordinatesDelegate>
+@interface AddImageToPublicationViewController : BaseViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, TapCoordinatesDelegate>
 
 //Image Layout
 @property (strong, nonatomic) IBOutlet UIImageView  *imgTakenPicture;

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LocatInMapViewController.h"
+#import "BaseViewController.h"
 
-@interface PublishMyCarViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate, TapCoordinatesDelegate> {
+@interface PublishMyCarViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate, TapCoordinatesDelegate> {
 }
 
 @end
