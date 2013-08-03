@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9CEA00217AD929B00381604 /* ImageCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CEA00117AD929B00381604 /* ImageCarouselView.m */; };
+		C9CEA00617AD92CF00381604 /* ImageDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CEA00517AD92CE00381604 /* ImageDetailView.m */; };
+		C9CEA00817AD92F300381604 /* ImageDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9CEA00717AD92F300381604 /* ImageDetailView.xib */; };
 		D624CA7917AD7C9A00492DBE /* UITableViewCellLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */; };
 		D624CA7A17AD891A00492DBE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62E38CB17AD69E700BF1BFD /* CoreLocation.framework */; };
 		D62E389A17AD2DCD00BF1BFD /* AddImageToPublicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */; };
@@ -61,6 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9CEA00017AD929B00381604 /* ImageCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCarouselView.h; path = ImageCarouselView/ImageCarouselView.h; sourceTree = "<group>"; };
+		C9CEA00117AD929B00381604 /* ImageCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCarouselView.m; path = ImageCarouselView/ImageCarouselView.m; sourceTree = "<group>"; };
+		C9CEA00417AD92CE00381604 /* ImageDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageDetailView.h; path = ImageDetailView/ImageDetailView.h; sourceTree = "<group>"; };
+		C9CEA00517AD92CE00381604 /* ImageDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageDetailView.m; path = ImageDetailView/ImageDetailView.m; sourceTree = "<group>"; };
+		C9CEA00717AD92F300381604 /* ImageDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageDetailView.xib; path = ImageDetailView/ImageDetailView.xib; sourceTree = "<group>"; };
 		D624CA7717AD7C9A00492DBE /* UITableViewCellLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellLoader.h; sourceTree = "<group>"; };
 		D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellLoader.m; sourceTree = "<group>"; };
 		D62E389717AD2DCD00BF1BFD /* AddImageToPublicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageToPublicationViewController.h; sourceTree = "<group>"; };
@@ -148,6 +156,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9CE9FFF17AD925B00381604 /* ImagesCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				C9CEA00017AD929B00381604 /* ImageCarouselView.h */,
+				C9CEA00117AD929B00381604 /* ImageCarouselView.m */,
+			);
+			name = ImagesCarousel;
+			sourceTree = "<group>";
+		};
+		C9CEA00317AD92B000381604 /* ImageDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C9CEA00417AD92CE00381604 /* ImageDetailView.h */,
+				C9CEA00517AD92CE00381604 /* ImageDetailView.m */,
+				C9CEA00717AD92F300381604 /* ImageDetailView.xib */,
+			);
+			name = ImageDetailView;
+			sourceTree = "<group>";
+		};
 		D62E389417AD2D9100BF1BFD /* ScreenAddImageToPublication */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +198,8 @@
 		D62E389617AD2D9100BF1BFD /* ScreenPublicationPreview */ = {
 			isa = PBXGroup;
 			children = (
+				C9CEA00317AD92B000381604 /* ImageDetailView */,
+				C9CE9FFF17AD925B00381604 /* ImagesCarousel */,
 				D62E38A117AD2DFD00BF1BFD /* PublicationPreviewViewController.h */,
 				D62E38A217AD2DFD00BF1BFD /* PublicationPreviewViewController.m */,
 				D62E38A317AD2DFD00BF1BFD /* PublicationPreviewViewController.xib */,
@@ -466,6 +495,7 @@
 				D62E38A517AD2DFD00BF1BFD /* PublicationPreviewViewController.xib in Resources */,
 				D62E38C117AD5F4B00BF1BFD /* PublicationImageCell.xib in Resources */,
 				D62E38CE17AD720400BF1BFD /* mapicon.jpg in Resources */,
+				C9CEA00817AD92F300381604 /* ImageDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +545,8 @@
 				D62E38BF17AD578E00BF1BFD /* AsyncImageLoader.m in Sources */,
 				D62E38C717AD623700BF1BFD /* KeyboardManager.m in Sources */,
 				D624CA7917AD7C9A00492DBE /* UITableViewCellLoader.m in Sources */,
+				C9CEA00217AD929B00381604 /* ImageCarouselView.m in Sources */,
+				C9CEA00617AD92CF00381604 /* ImageDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

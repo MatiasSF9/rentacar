@@ -1,4 +1,4 @@
-//
+dasd//
 //  AddImageToPublicationViewController.m
 //  RentACar
 //
@@ -53,9 +53,6 @@
     
 }
 
-/*
- *Opens library to pick images
- */
 - (IBAction)selectLibraryPicture:(UIButton *)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -125,35 +122,34 @@
     return YES;
 }
 
-#pragma mark - TapCoordinatesDelegate
-
-- (void) mapWasTappedinLocation:(CLLocationCoordinate2D) coordinates{
-    self.location = coordinates;
-    self.lblLocation.text = [NSString stringWithFormat:@"%0.0f, %0.0f",
-                                coordinates.latitude, coordinates.longitude];
-    self.lblLocation.hidden = NO;
-    [self.navigationController popViewControllerAnimated: YES];
-    [self didCompleteAllFields];
-}
-
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [KeyboardManager willMoveToVisibleArea:textField inView: self.textFieldContainerView];
 }
 
+#pragma mark - TapCoordinatesDelegate
+
+- (void)mapWasTappedinLocation:(CLLocationCoordinate2D) coordinates{
+    self.location = coordinates;
+    self.lblLocation.text = [NSString stringWithFormat:@"%0.4f, %0.4f",
+                                coordinates.latitude, coordinates.longitude];
+    self.lblLocation.hidden = NO;
+    [self didCompleteAllFields];
+}
+
 #pragma mark - Private Methods
 
-- (void) resizeImageAndPreview: (UIImage*) image {
+- (void)resizeImageAndPreview: (UIImage*) image {
     
     self.imgTakenPicture.image = [self.imgTakenPicture makeResizedImage: image :self.imgTakenPicture.frame.size quality:kCGInterpolationMedium];
     [self switchLayoutsVisibility: NO];
 }
 
-- (void) switchLayoutsVisibility:(BOOL)visibility {
+- (void)switchLayoutsVisibility:(BOOL)visibility {
     self.textFieldContainerView.hidden = visibility;
     self.buttonContainerView.hidden = !visibility;
 }
 
-- (void) didCompleteAllFields {
+- (void)didCompleteAllFields {
     self.btnNext.hidden =  [self.txtFldTitle.text isEqualToString:@""]
                         || [self.txtFldDescription.text isEqualToString:@""]
                         || !self.imgTakenPicture.image
