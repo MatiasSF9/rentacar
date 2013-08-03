@@ -7,6 +7,7 @@
 //
 
 #import "CarsListViewController.h"
+#import "AddImageToPublicationViewController.h"
 
 @interface CarsListViewController ()
 
@@ -34,6 +35,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBAction
+
+- (IBAction) nextStep:(id)sender {
+    [self.navigationController pushViewController:[[AddImageToPublicationViewController alloc] initWithNibName:@"AddImageToPublicationViewController" bundle:nil]
+                                         animated:YES];
 }
 
 @end
