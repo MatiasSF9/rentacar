@@ -43,6 +43,12 @@ static PublicationBuilder* instance;
     return this;
 }
 
+- (void) clearCurrentBuild {
+    //TODO: Clear all thrash objects
+    [self startNewPublication];
+}
+
+
 #pragma mark - Initializing Methods
 
 - (void) startNewPublication {

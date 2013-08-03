@@ -38,6 +38,8 @@
 //Final build Method. Only call when Publication is confirmed by the user.
 - (void) buildReportingStatusToDelegate:(id<PublicationBuildStatusDelegate>) delegate;
 
+//Clears all the data currently associated and creates a new object reay to receive data.
+- (void) clearCurrentBuild;
 
 - (NSArray*) getCurrentPublicationImages;
 

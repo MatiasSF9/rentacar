@@ -15,10 +15,10 @@
 - (void)setUp
 {
     [super setUp];
-    //Here goes all setup code for tests.
+    //Here goes all setup code for each test.
     
-    //Makes the singleton initialize
-    [PublicationBuilder sharedInstance];
+    //Makes the singleton initialize and get cleared on each run, to avoid side effects
+    [[PublicationBuilder sharedInstance] clearCurrentBuild];
 }
 
 - (void)tearDown
