@@ -83,6 +83,12 @@
     [self.navigationController popViewControllerAnimated: YES];
 }
 
+- (IBAction)locateCarInMap:(id)sender {
+    LocatInMapViewController* controller = [[LocatInMapViewController alloc] initWithNibName:@"LocatInMapViewController" bundle:nil];
+    [controller setTapDelegate:self];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker
@@ -114,6 +120,17 @@
     return YES;
 }
 
+#pragma mark - TapCoordinatesDelegate
+
+- (void) mapWasTappedinLocation:(CLLocationCoordinate2D) coordinates{
+    self.location = coordinates;
+    self.lblLocation.text = [NSString stringWithFormat:@"%0.0f, %0.0f",
+                                coordinates.latitude, coordinates.longitude];
+    self.lblLocation.hidden = NO;
+    [self.navigationController popViewControllerAnimated: YES];
+    [self didCompleteAllFields];
+}
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [KeyboardManager willMoveToVisibleArea:textField inView: self.textFieldContainerView];
 }
@@ -134,7 +151,8 @@
 - (void) didCompleteAllFields {
     self.btnNext.hidden =  [self.txtFldTitle.text isEqualToString:@""]
                         || [self.txtFldDescription.text isEqualToString:@""]
-                        ||  !self.imgTakenPicture.image;
+                        || !self.imgTakenPicture.image
+                        || self.location.latitude == 0;
 }
 
 @end

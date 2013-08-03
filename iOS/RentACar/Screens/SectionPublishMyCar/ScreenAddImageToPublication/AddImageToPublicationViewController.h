@@ -9,25 +9,25 @@
 #import <UIKit/UIKit.h>
 #import "AsyncImageLoader.h"
 #import <MapKit/MapKit.h>
+#import "LocatInMapViewController.h"
 
-@interface AddImageToPublicationViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
-
-
+@interface AddImageToPublicationViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, TapCoordinatesDelegate>
 
 //Image Layout
-@property (strong, nonatomic) IBOutlet UIImageView *imgTakenPicture;
-@property (strong, nonatomic) IBOutlet UIButton *btnChange;
+@property (strong, nonatomic) IBOutlet UIImageView  *imgTakenPicture;
+@property (strong, nonatomic) IBOutlet UIButton     *btnChange;
 
 //Buttons Layout
-@property (strong, nonatomic) IBOutlet UIView *buttonContainerView;
-@property (strong, nonatomic) IBOutlet UIButton *btnSelect;
-@property (strong, nonatomic) IBOutlet UIButton *btnTakePicture;
+@property (strong, nonatomic) IBOutlet UIView       *buttonContainerView;
+@property (strong, nonatomic) IBOutlet UIButton     *btnSelect;
+@property (strong, nonatomic) IBOutlet UIButton     *btnTakePicture;
 
 //Image Data Layout
 @property (strong, nonatomic) IBOutlet UIScrollView *textFieldContainerView;
-@property (strong, nonatomic) IBOutlet UIButton *btnNext;
-@property (strong, nonatomic) IBOutlet UITextField *txtFldTitle;
-@property (strong, nonatomic) IBOutlet UITextField *txtFldDescription;
+@property (strong, nonatomic) IBOutlet UIButton     *btnNext;
+@property (strong, nonatomic) IBOutlet UITextField  *txtFldTitle;
+@property (strong, nonatomic) IBOutlet UITextField  *txtFldDescription;
+@property (strong, nonatomic) IBOutlet UILabel      *lblLocation;
 
 @property (assign, nonatomic) CLLocationCoordinate2D location;
 
