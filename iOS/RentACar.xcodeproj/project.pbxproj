@@ -14,6 +14,8 @@
 		D62E38A417AD2DFD00BF1BFD /* PublicationPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38A217AD2DFD00BF1BFD /* PublicationPreviewViewController.m */; };
 		D62E38A517AD2DFD00BF1BFD /* PublicationPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E38A317AD2DFD00BF1BFD /* PublicationPreviewViewController.xib */; };
 		D62E38A817AD302D00BF1BFD /* PublicationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38A717AD302D00BF1BFD /* PublicationBuilder.m */; };
+		D62E38AC17AD323100BF1BFD /* Publication.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38AB17AD323100BF1BFD /* Publication.m */; };
+		D62E38AF17AD324200BF1BFD /* PublicationImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38AE17AD324200BF1BFD /* PublicationImage.m */; };
 		D6F827BC17AD216C00E3C931 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BB17AD216C00E3C931 /* UIKit.framework */; };
 		D6F827BE17AD216C00E3C931 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BD17AD216C00E3C931 /* Foundation.framework */; };
 		D6F827C017AD216C00E3C931 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BF17AD216C00E3C931 /* CoreGraphics.framework */; };
@@ -61,6 +63,10 @@
 		D62E38A317AD2DFD00BF1BFD /* PublicationPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicationPreviewViewController.xib; sourceTree = "<group>"; };
 		D62E38A617AD302D00BF1BFD /* PublicationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicationBuilder.h; sourceTree = "<group>"; };
 		D62E38A717AD302D00BF1BFD /* PublicationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicationBuilder.m; sourceTree = "<group>"; };
+		D62E38AA17AD323100BF1BFD /* Publication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publication.h; sourceTree = "<group>"; };
+		D62E38AB17AD323100BF1BFD /* Publication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publication.m; sourceTree = "<group>"; };
+		D62E38AD17AD324200BF1BFD /* PublicationImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicationImage.h; sourceTree = "<group>"; };
+		D62E38AE17AD324200BF1BFD /* PublicationImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicationImage.m; sourceTree = "<group>"; };
 		D6F827B817AD216C00E3C931 /* RentACar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentACar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F827BB17AD216C00E3C931 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F827BD17AD216C00E3C931 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +154,17 @@
 			path = ScreenPublicationPreview;
 			sourceTree = "<group>";
 		};
+		D62E38A917AD321500BF1BFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D62E38AA17AD323100BF1BFD /* Publication.h */,
+				D62E38AB17AD323100BF1BFD /* Publication.m */,
+				D62E38AD17AD324200BF1BFD /* PublicationImage.h */,
+				D62E38AE17AD324200BF1BFD /* PublicationImage.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D6F827AF17AD216C00E3C931 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +199,7 @@
 		D6F827C117AD216C00E3C931 /* RentACar */ = {
 			isa = PBXGroup;
 			children = (
+				D62E38A917AD321500BF1BFD /* Model */,
 				D6F8280C17AD21AB00E3C931 /* AppDelegate */,
 				D6F8281E17AD25B600E3C931 /* Screens */,
 				D6F8280D17AD228000E3C931 /* Helpers */,
@@ -427,6 +445,8 @@
 				D62E389F17AD2DE100BF1BFD /* LocatInMapViewController.m in Sources */,
 				D62E38A417AD2DFD00BF1BFD /* PublicationPreviewViewController.m in Sources */,
 				D62E38A817AD302D00BF1BFD /* PublicationBuilder.m in Sources */,
+				D62E38AC17AD323100BF1BFD /* Publication.m in Sources */,
+				D62E38AF17AD324200BF1BFD /* PublicationImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
