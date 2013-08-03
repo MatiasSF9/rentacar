@@ -11,7 +11,13 @@
 
 @protocol PublicationBuildStatusDelegate <NSObject>
 
+//When its called, the builder informs that its object has been built and succesfully stored into the server.
 - (void) didEndPublishing;
+
+- (void) updateStatus:(NSNumber *) progress;
+
+//When its called, the builder informs that its object has been built, but an error has ocurred in the process.
+- (void) didEndWithError:(NSError*) error;
 
 @end
 

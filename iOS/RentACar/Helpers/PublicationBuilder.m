@@ -46,7 +46,6 @@ static PublicationBuilder* instance;
 }
 
 - (void) clearCurrentBuild {
-    //TODO: Clear all thrash objects
     [self startNewPublication];
 }
 
@@ -62,7 +61,14 @@ static PublicationBuilder* instance;
 
 - (void) buildReportingStatusToDelegate:(id<PublicationBuildStatusDelegate>) delegate {
     self.delegate = delegate;
-    //TODO--- inform delegate progress. Upload through web connection
+    
+    for (int i = 0; i < self.imagesList.count; i++) {
+        PublicationImage* img = [self.imagesList objectAtIndex:i];
+        //TODO: Perform HTTP POST request to upload each of the images. (1 request per image)
+        [delegate updateStatus:[NSNumber numberWithFloat:((i+1)/self.imagesList.count) * 100]];
+    }
+    
+    [delegate didEndPublishing];
     
     [self.currentPublication setImages:self.imagesList];
 }
