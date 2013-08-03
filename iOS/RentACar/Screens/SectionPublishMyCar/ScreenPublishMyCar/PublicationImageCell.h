@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PublicationImage.h"
 
 @interface PublicationImageCell : UITableViewCell
+
+- (void) configureCell:(PublicationImage*) publicationImage;
 
 @end

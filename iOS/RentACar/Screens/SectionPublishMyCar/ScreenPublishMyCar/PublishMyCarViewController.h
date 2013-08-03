@@ -9,12 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PublishMyCarViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate> {
-    IBOutlet UITextField* txtUsername;
-    IBOutlet UITextField* txtContactNumber;
-    IBOutlet UITextField* txtTitle;
-    IBOutlet UITextField* txtDescription;
-    IBOutlet UITextField* txtRentalCost;
-    IBOutlet UITableView* tblCarImages;
 }
 
 @end

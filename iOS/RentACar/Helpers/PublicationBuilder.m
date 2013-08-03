@@ -100,6 +100,11 @@ static PublicationBuilder* instance;
     return YES;
 }
 
+- (NSArray*) getCurrentPublicationImages {
+    //TODO: Chequear!!!
+    return [NSArray arrayWithArray:self.imagesList];
+}
+
 
 
 @end

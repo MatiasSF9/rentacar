@@ -39,4 +39,6 @@
 - (void) buildReportingStatusToDelegate:(id<PublicationBuildStatusDelegate>) delegate;
 
 
+- (NSArray*) getCurrentPublicationImages;
+
 @end
