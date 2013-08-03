@@ -7,6 +7,7 @@
 //
 
 #import "PublishMyCarViewController.h"
+#import "PublicationPreviewViewController.h"
 
 @interface PublishMyCarViewController ()
 
@@ -18,10 +19,17 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
+        self.title = NSLocalizedString(@"My Car", @"My Car");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
+}
+
+#pragma Mark - IBActions
+
+- (IBAction) openPreview:(id)sender {
+    [self.navigationController pushViewController:[[PublicationPreviewViewController alloc] initWithNibName:@"PublicationPreviewViewController" bundle:nil]
+                                         animated:YES];
 }
 							
 - (void)viewDidLoad

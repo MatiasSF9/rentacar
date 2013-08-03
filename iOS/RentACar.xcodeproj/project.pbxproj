@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62E389A17AD2DCD00BF1BFD /* AddImageToPublicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */; };
+		D62E389B17AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */; };
+		D62E389F17AD2DE100BF1BFD /* LocatInMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389D17AD2DE100BF1BFD /* LocatInMapViewController.m */; };
+		D62E38A017AD2DE100BF1BFD /* LocatInMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E389E17AD2DE100BF1BFD /* LocatInMapViewController.xib */; };
+		D62E38A417AD2DFD00BF1BFD /* PublicationPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38A217AD2DFD00BF1BFD /* PublicationPreviewViewController.m */; };
+		D62E38A517AD2DFD00BF1BFD /* PublicationPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E38A317AD2DFD00BF1BFD /* PublicationPreviewViewController.xib */; };
+		D62E38A817AD302D00BF1BFD /* PublicationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E38A717AD302D00BF1BFD /* PublicationBuilder.m */; };
 		D6F827BC17AD216C00E3C931 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BB17AD216C00E3C931 /* UIKit.framework */; };
 		D6F827BE17AD216C00E3C931 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BD17AD216C00E3C931 /* Foundation.framework */; };
 		D6F827C017AD216C00E3C931 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F827BF17AD216C00E3C931 /* CoreGraphics.framework */; };
@@ -43,6 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D62E389717AD2DCD00BF1BFD /* AddImageToPublicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageToPublicationViewController.h; sourceTree = "<group>"; };
+		D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageToPublicationViewController.m; sourceTree = "<group>"; };
+		D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageToPublicationViewController.xib; sourceTree = "<group>"; };
+		D62E389C17AD2DE100BF1BFD /* LocatInMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocatInMapViewController.h; sourceTree = "<group>"; };
+		D62E389D17AD2DE100BF1BFD /* LocatInMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocatInMapViewController.m; sourceTree = "<group>"; };
+		D62E389E17AD2DE100BF1BFD /* LocatInMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocatInMapViewController.xib; sourceTree = "<group>"; };
+		D62E38A117AD2DFD00BF1BFD /* PublicationPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicationPreviewViewController.h; sourceTree = "<group>"; };
+		D62E38A217AD2DFD00BF1BFD /* PublicationPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicationPreviewViewController.m; sourceTree = "<group>"; };
+		D62E38A317AD2DFD00BF1BFD /* PublicationPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicationPreviewViewController.xib; sourceTree = "<group>"; };
+		D62E38A617AD302D00BF1BFD /* PublicationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicationBuilder.h; sourceTree = "<group>"; };
+		D62E38A717AD302D00BF1BFD /* PublicationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicationBuilder.m; sourceTree = "<group>"; };
 		D6F827B817AD216C00E3C931 /* RentACar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentACar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F827BB17AD216C00E3C931 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F827BD17AD216C00E3C931 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +118,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D62E389417AD2D9100BF1BFD /* ScreenAddImageToPublication */ = {
+			isa = PBXGroup;
+			children = (
+				D62E389717AD2DCD00BF1BFD /* AddImageToPublicationViewController.h */,
+				D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */,
+				D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */,
+			);
+			path = ScreenAddImageToPublication;
+			sourceTree = "<group>";
+		};
+		D62E389517AD2D9100BF1BFD /* ScreenLocatInMap */ = {
+			isa = PBXGroup;
+			children = (
+				D62E389C17AD2DE100BF1BFD /* LocatInMapViewController.h */,
+				D62E389D17AD2DE100BF1BFD /* LocatInMapViewController.m */,
+				D62E389E17AD2DE100BF1BFD /* LocatInMapViewController.xib */,
+			);
+			path = ScreenLocatInMap;
+			sourceTree = "<group>";
+		};
+		D62E389617AD2D9100BF1BFD /* ScreenPublicationPreview */ = {
+			isa = PBXGroup;
+			children = (
+				D62E38A117AD2DFD00BF1BFD /* PublicationPreviewViewController.h */,
+				D62E38A217AD2DFD00BF1BFD /* PublicationPreviewViewController.m */,
+				D62E38A317AD2DFD00BF1BFD /* PublicationPreviewViewController.xib */,
+			);
+			path = ScreenPublicationPreview;
+			sourceTree = "<group>";
+		};
 		D6F827AF17AD216C00E3C931 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +236,8 @@
 		D6F8280D17AD228000E3C931 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D62E38A617AD302D00BF1BFD /* PublicationBuilder.h */,
+				D62E38A717AD302D00BF1BFD /* PublicationBuilder.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -234,6 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				D6F8283217AD266E00E3C931 /* ScreenPublishMyCar */,
+				D62E389417AD2D9100BF1BFD /* ScreenAddImageToPublication */,
+				D62E389517AD2D9100BF1BFD /* ScreenLocatInMap */,
+				D62E389617AD2D9100BF1BFD /* ScreenPublicationPreview */,
 			);
 			path = SectionPublishMyCar;
 			sourceTree = "<group>";
@@ -329,6 +382,9 @@
 				D6F8281B17AD228000E3C931 /* second@2x.png in Resources */,
 				D6F8282D17AD25B600E3C931 /* CarsListViewController_iPhone.xib in Resources */,
 				D6F8283717AD266E00E3C931 /* PublishMyCarViewController_iPhone.xib in Resources */,
+				D62E389B17AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib in Resources */,
+				D62E38A017AD2DE100BF1BFD /* LocatInMapViewController.xib in Resources */,
+				D62E38A517AD2DFD00BF1BFD /* PublicationPreviewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +423,10 @@
 				D6F827CC17AD216C00E3C931 /* AppDelegate.m in Sources */,
 				D6F8282B17AD25B600E3C931 /* CarsListViewController.m in Sources */,
 				D6F8283617AD266E00E3C931 /* PublishMyCarViewController.m in Sources */,
+				D62E389A17AD2DCD00BF1BFD /* AddImageToPublicationViewController.m in Sources */,
+				D62E389F17AD2DE100BF1BFD /* LocatInMapViewController.m in Sources */,
+				D62E38A417AD2DFD00BF1BFD /* PublicationPreviewViewController.m in Sources */,
+				D62E38A817AD302D00BF1BFD /* PublicationBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +603,7 @@
 				D6F8280617AD216C00E3C931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6F8280717AD216C00E3C931 /* Build configuration list for PBXNativeTarget "RentACarTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +612,7 @@
 				D6F8280917AD216C00E3C931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
