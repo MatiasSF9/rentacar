@@ -36,31 +36,54 @@
     return self;
 }
 
+
+- (void)setPublicationImagesForRegularScroll: (NSArray*) array {
+    int position = 0;
+    for (PublicationImage *image in array) {
+        ImageDetailView *detail = [[ImageDetailView alloc] init];
+        [detail configureCell: image];
+        [detail setFrame: CGRectMake(IMAGE_CELL_WIDTH *position, 0, IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
+        [self addSubview: detail];
+        position++;
+    }
+    
+    [pageControl setCurrentPage:0];
+    [pageControl setNumberOfPages: position];
+    self.contentSize = CGSizeMake(self.frame.size.width * position,
+                                  self.frame.size.height);
+
+}
+
+
 - (void)setPublicationImages:(NSArray*) array {
     
     kNumberOfPages = array.count;
     publicationImages = array;
     imageB = [[ImageDetailView alloc] init];
     [imageB configureCell: [array objectAtIndex: 0]];
-    [imageB setFrame: CGRectMake(0, 0, IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
     [self addSubview: imageA];
     
-    if (kNumberOfPages>1) {
-        imageA = [[ImageDetailView alloc] init];
-        [imageA setFrame: CGRectMake(-IMAGE_CELL_WIDTH, 0, IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
-        imageC= [[ImageDetailView alloc] init];
-        [imageC setFrame: CGRectMake(IMAGE_CELL_WIDTH, 0, IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
-        [self addSubview: imageB];
-        [self addSubview: imageC];
-        [self setScrollEnabled: YES];
-    }
-    
+    //The Scroll content will have as max width 3 pages since we will be reloading the views' contents.
+
+    int scrollPages = kNumberOfPages > 3 ? 3 : kNumberOfPages;
+    self.contentSize = CGSizeMake(self.frame.size.width * scrollPages,
+                                  self.frame.size.height);
     [pageControl setCurrentPage:0];
     [pageControl setNumberOfPages: kNumberOfPages];
     
-    self.contentSize = CGSizeMake(self.frame.size.width * kNumberOfPages,
-                                  self.frame.size.height);
-    
+    if (kNumberOfPages>1) {
+        [imageB setFrame: CGRectMake(IMAGE_CELL_WIDTH, 0, IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
+        
+        imageA = [[ImageDetailView alloc] init];
+        [imageA setFrame: CGRectMake(0, 0, IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
+        imageC= [[ImageDetailView alloc] init];
+        [imageC setFrame: CGRectMake(IMAGE_CELL_WIDTH*2, 0, IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
+        [self addSubview: imageB];
+        [self addSubview: imageC];
+        [self setScrollEnabled: YES];
+        [self scrollToCenter];
+    }
+   
 }
 
 /*
@@ -118,6 +141,7 @@
     [self loadScrollViewWithPage:page];
     
 }
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     pageControlUsed = NO;
 }

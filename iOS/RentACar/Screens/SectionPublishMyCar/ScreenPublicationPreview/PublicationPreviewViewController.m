@@ -44,8 +44,9 @@
     lblRentalFee.text = [[[PublicationBuilder sharedInstance] getPublicationCostPerDay] stringValue];
     
     NSArray *images = [[PublicationBuilder sharedInstance] getCurrentPublicationImages];
-    if (images.count) {
-        [carouselView setPublicationImages: images];
+    if (images.count > 0) {
+//        [carouselView setPublicationImages: images];
+        [carouselView setPublicationImagesForRegularScroll: images];
     } else {
         [carouselView setHidden: YES];
     }
@@ -56,4 +57,28 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)submit:(id)sender {
+    [[PublicationBuilder sharedInstance] buildReportingStatusToDelegate: self];
+}
+
+#pragma mark - PublicationBuilderDelegate
+- (void) didEndPublishing {
+    [[PublicationBuilder sharedInstance] clearCurrentBuild];
+    [[[UIAlertView alloc] initWithTitle: @""
+                                message: NSLocalizedString(@"Success", @"Publication Success")
+                               delegate: nil
+                      cancelButtonTitle: @"OK" otherButtonTitles: nil, nil] show];
+    [self.navigationController popToRootViewControllerAnimated: YES];
+}
+- (void) updateStatus:(NSNumber *) progress {
+    
+}
+
+- (void) didEndWithError:(NSError*) error {
+    [[[UIAlertView alloc] initWithTitle: @""
+                                message: NSLocalizedString(@"Fail", @"Publication Fail")
+                               delegate: nil
+                      cancelButtonTitle: @"OK" otherButtonTitles: nil, nil] show];
+    
+}
 @end

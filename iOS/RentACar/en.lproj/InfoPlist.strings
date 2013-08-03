@@ -2,3 +2,5 @@
 "Rent My Car" = "Rent My Car";
 "Add New Photo" = "Add New Photo";
 "Publication Preview" = "Publication Preview";
+"Success" = "Your car was successfully published!";
+"Fail" = "There was an error while publishing your car. Please try again.";

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "PublicationBuilder.h"
 
-@interface PublicationPreviewViewController : BaseViewController
+@interface PublicationPreviewViewController : BaseViewController <PublicationBuildStatusDelegate>
 
 @end
