@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AsyncImageLoader.h"
+#import <MapKit/MapKit.h>
 
 @interface AddImageToPublicationViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 
@@ -28,6 +29,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtFldTitle;
 @property (strong, nonatomic) IBOutlet UITextField *txtFldDescription;
 
+@property (assign, nonatomic) CLLocationCoordinate2D location;
 
 - (IBAction)changePicture:(id)sender;
 - (IBAction)nextStep:(id)sender;

@@ -8,7 +8,7 @@
 
 #import "AddImageToPublicationViewController.h"
 #import "KeyboardManager.h"
-
+#import "PublicationBuilder.h"
 
 @interface AddImageToPublicationViewController ()
 
@@ -75,7 +75,12 @@
 }
 
 - (IBAction)nextStep:(id)sender {
-    
+    NSData *imageData = UIImagePNGRepresentation(self.imgTakenPicture.image);
+    [[PublicationBuilder sharedInstance] addImageToPublicationWithTitle:self.txtFldTitle.text
+                                                            description:self.txtFldDescription.text
+                                                             inLocation:self.location
+                                                       withImageRawData:imageData];
+    [self.navigationController popViewControllerAnimated: YES];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
