@@ -22,7 +22,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnTakePicture;
 
 //Image Data Layout
-@property (strong, nonatomic) IBOutlet UIView *textFieldContainerView;
+@property (strong, nonatomic) IBOutlet UIScrollView *textFieldContainerView;
 @property (strong, nonatomic) IBOutlet UIButton *btnNext;
 @property (strong, nonatomic) IBOutlet UITextField *txtFldTitle;
 @property (strong, nonatomic) IBOutlet UITextField *txtFldDescription;
