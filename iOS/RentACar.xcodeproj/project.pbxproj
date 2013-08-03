@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D624CA7917AD7C9A00492DBE /* UITableViewCellLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */; };
 		D62E389A17AD2DCD00BF1BFD /* AddImageToPublicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */; };
 		D62E389B17AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */; };
 		D62E389F17AD2DE100BF1BFD /* LocatInMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E389D17AD2DE100BF1BFD /* LocatInMapViewController.m */; };
@@ -59,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D624CA7717AD7C9A00492DBE /* UITableViewCellLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellLoader.h; sourceTree = "<group>"; };
+		D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellLoader.m; sourceTree = "<group>"; };
 		D62E389717AD2DCD00BF1BFD /* AddImageToPublicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageToPublicationViewController.h; sourceTree = "<group>"; };
 		D62E389817AD2DCD00BF1BFD /* AddImageToPublicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageToPublicationViewController.m; sourceTree = "<group>"; };
 		D62E389917AD2DCD00BF1BFD /* AddImageToPublicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageToPublicationViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				D62E38BB17AD565C00BF1BFD /* DiskCache.m */,
 				D62E38C517AD623700BF1BFD /* KeyboardManager.h */,
 				D62E38C617AD623700BF1BFD /* KeyboardManager.m */,
+				D624CA7717AD7C9A00492DBE /* UITableViewCellLoader.h */,
+				D624CA7817AD7C9A00492DBE /* UITableViewCellLoader.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				D62E38BC17AD565C00BF1BFD /* DiskCache.m in Sources */,
 				D62E38BF17AD578E00BF1BFD /* AsyncImageLoader.m in Sources */,
 				D62E38C717AD623700BF1BFD /* KeyboardManager.m in Sources */,
+				D624CA7917AD7C9A00492DBE /* UITableViewCellLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

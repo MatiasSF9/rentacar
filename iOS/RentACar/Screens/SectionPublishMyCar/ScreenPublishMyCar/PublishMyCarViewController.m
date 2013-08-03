@@ -12,8 +12,9 @@
 #import "PublicationBuilder.h"
 #import "PublicationImageCell.h"
 #import "KeyboardManager.h"
+#import "UITableViewCellLoader.h"
 
-#define HEIGHT_CELL_CAR_IMAGES_PUBLICATION  50
+#define HEIGHT_CELL_CAR_IMAGES_PUBLICATION  100
 #define MAX_TABLE_HEIGHT                    150
 
 //Private interface and properties
@@ -44,7 +45,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +56,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     //Resizes the view content when is going to be shown to do it properly.
     [self resizeContent];
+    [self reloadPhotos];
 }
 
 - (void) resizeContent {
@@ -70,6 +71,12 @@
     
     //Make the scroll view have a content size equal to last point of the last element so everything can be seen while scrolling.
     [dataScrollView setContentSize:CGSizeMake(dataScrollView.frame.size.width, tblCarImages.frame.origin.y + tblCarImages.frame.size.height)];
+}
+
+- (void) reloadPhotos {
+    
+    //Reload the table View
+    [tblCarImages reloadData];
 }
 
 #pragma Mark - IBActions
@@ -131,7 +138,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //Deques exisiting cells to reuse them and avoid using too much memory for cell displaying. This is a critical point beacuse we are handling heavy images on each cell.
-    PublicationImageCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ID-PublicationImageCell"];
+    PublicationImageCell* cell = [PublicationImageCell loadCellNibForTableView:tableView withIdentifier:@"PublicationImageCell"];
     
     //Only if no cell was available to reuse, create a new one.
     if(!cell) {
