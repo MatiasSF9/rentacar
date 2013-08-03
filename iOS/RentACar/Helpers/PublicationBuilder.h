@@ -16,8 +16,10 @@
 @end
 
 //Builder Object for managing the Publication creation lifecycle
-//It also works as a Singleton
+//It also works as a Singleton, use sharedInstance methos to call it.
 @interface PublicationBuilder : NSObject
+
++ (PublicationBuilder*) sharedInstance;
 
 - (void) setPublicationDescription:(NSString*) description;
 - (void) setPublicationTitle:(NSString*) title;
