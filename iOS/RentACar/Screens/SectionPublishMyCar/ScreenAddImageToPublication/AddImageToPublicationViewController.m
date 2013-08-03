@@ -1,4 +1,4 @@
-dasd//
+//
 //  AddImageToPublicationViewController.m
 //  RentACar
 //

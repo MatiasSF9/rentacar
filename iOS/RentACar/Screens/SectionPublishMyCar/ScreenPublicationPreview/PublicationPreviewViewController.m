@@ -36,12 +36,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [carouselView setPublicationImages: [[PublicationBuilder sharedInstance] getCurrentPublicationImages]];
+
     lblTitle.text = [[PublicationBuilder sharedInstance] getPublicationTitle];
     lblDescription.text =[[PublicationBuilder sharedInstance] getPublicationDescription];
     lblUserNmae.text = [[PublicationBuilder sharedInstance] getPublicationUsername];
     lblContactNumber.text =[[PublicationBuilder sharedInstance] getPublicationContactNumber];
     lblRentalFee.text = [[[PublicationBuilder sharedInstance] getPublicationCostPerDay] stringValue];
+    
+    NSArray *images = [[PublicationBuilder sharedInstance] getCurrentPublicationImages];
+    if (images.count) {
+        [carouselView setPublicationImages: images];
+    } else {
+        [carouselView setHidden: YES];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
