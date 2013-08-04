@@ -65,7 +65,7 @@
 - (void) didEndPublishing {
     [[PublicationBuilder sharedInstance] clearCurrentBuild];
     [[[UIAlertView alloc] initWithTitle: @""
-                                message: NSLocalizedString(@"Success", @"Publication Success")
+                                message: NSLocalizedString(@"Your publication was created successfully!", @"Publication Success")
                                delegate: nil
                       cancelButtonTitle: @"OK" otherButtonTitles: nil, nil] show];
     [self.navigationController popToRootViewControllerAnimated: YES];

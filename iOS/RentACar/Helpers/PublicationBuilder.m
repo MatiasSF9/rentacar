@@ -62,9 +62,11 @@ static PublicationBuilder* instance;
 - (void) buildReportingStatusToDelegate:(id<PublicationBuildStatusDelegate>) delegate {
     self.delegate = delegate;
     
+    //TODO: Publication initial upload, with all its data except the images.
+    
     for (int i = 0; i < self.imagesList.count; i++) {
-        PublicationImage* img = [self.imagesList objectAtIndex:i];
-        //TODO: Perform HTTP POST request to upload each of the images. (1 request per image)
+//        PublicationImage* img = [self.imagesList objectAtIndex:i];
+//TODO:   Perform HTTP POST request to upload each of the images. (1 request per image), because its crazy to upload all of them together.
         [delegate updateStatus:[NSNumber numberWithFloat:((i+1)/self.imagesList.count) * 100]];
     }
     

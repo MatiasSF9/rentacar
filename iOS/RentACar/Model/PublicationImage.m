@@ -15,6 +15,7 @@
 #define IMG_HASH_LOCATION @"__imgLocation__"
 #define IMG_DATA @"__imgData__"
 
+//Methods required for saving object into disk
 - (id)initWithCoder:(NSCoder *)decoder {
     if ((self = [super init])) {
         

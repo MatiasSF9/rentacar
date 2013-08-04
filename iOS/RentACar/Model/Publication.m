@@ -20,6 +20,8 @@
 
 @implementation Publication
 
+
+//Methods required for saving object into disk
 - (id)initWithCoder:(NSCoder *)decoder {
     if ((self = [super init])) {
         
